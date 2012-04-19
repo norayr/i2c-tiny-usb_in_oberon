@@ -1,0 +1,4 @@
+MODULE stubs-32 [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+END stubs-32.

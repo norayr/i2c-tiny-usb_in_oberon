@@ -1,0 +1,37 @@
+
+/* for now, ignore const attributes */
+#define const
+
+H2O {
+  OPTIONS {
+    OutputDirectory = "src";
+    Include = 
+      "/usr/include";
+    Exclude = "bits/types.h", "sys/types.h", "sys/param.h", "bits/dirent.h", "dirent.h", "stdint.h", "waitstatus.h", "stdlib.h", "types.h", "unistd.h", "signal.h", "alloca.h", "stdarg.h", "stddef.h", "limits.h", "float.h", "time.h", "stdio.h";
+    SearchPathAfterLocal = 1;
+    /* AllowRedefinedProc = 1; 
+    AllowRedefined = 1; */
+  }
+
+  MODULE "usb" {
+  LinkLib = "usb";
+    Merge = 1;
+    Prolog = "
+typedef signed char int8_t;
+typedef unsigned char uint8_t;
+typedef signed short int int16_t;
+typedef unsigned short int uint16_t;
+typedef signed long int int32_t;
+typedef unsigned long int uint32_t;
+typedef signed long long int int64_t;
+typedef unsigned long long int uint64_t;
+typedef uint32_t size_t;
+#define __declspec(x)
+#define inline
+typedef void * FILE;
+";
+
+  } 
+}
+#include <usb.h>
+/*#include <usbpp.h>*/

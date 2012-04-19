@@ -1,0 +1,7 @@
+MODULE typesizes [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  _BITS_TYPESIZES_H* = 1;
+  __FD_SETSIZE* = 1024;
+END typesizes.

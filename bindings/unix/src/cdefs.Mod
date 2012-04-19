@@ -1,0 +1,6 @@
+MODULE cdefs [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  _SYS_CDEFS_H* = 1;
+END cdefs.

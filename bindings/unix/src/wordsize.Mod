@@ -1,0 +1,6 @@
+MODULE wordsize [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  __WORDSIZE* = 32;
+END wordsize.

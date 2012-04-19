@@ -1,0 +1,14 @@
+libusb and some unix modules bindings were made with the help of Stewart Greenhill's H2O tool.
+i2c.Mod code is based on i2c-tiny-usb author, Tim Harbaum's C example.
+this code shows how to work with ds1621 temperature sensor and hmc6352 compass via i2c-tiny-usb interface in Oberon (oo2c)
+sonar.Mod is a test module to work with custom made range finder.
+
+compile with oo2c Oberon compiler.
+
+known bugs:
+this code was developed and tested on GNU+Linux/amd64 (Gentoo). Later, I've tested it on Nokia N810 and N900 and found out that on Maemo/ARMv7 and ARMv6 there is a different output caused by wrong division results in ds1621.Mod.
+Further investigation revealed that oo2c REAL division does not work well on ARM, and it is caused by gcc compilers < 4.6, without VFP support.
+That's why in order to get ds1621 module to work it is necessary to replace division (/) by the shift. Floating point test code for oo2c is available under float_test directory.
+
+this code is distributed under GPLv3 license.
+Norayr Chilingarian

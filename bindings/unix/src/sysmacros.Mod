@@ -1,0 +1,6 @@
+MODULE sysmacros [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  _SYS_SYSMACROS_H* = 1;
+END sysmacros.

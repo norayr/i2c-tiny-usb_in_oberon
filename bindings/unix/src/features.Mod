@@ -1,0 +1,32 @@
+MODULE features [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  _FEATURES_H* = 1;
+  __USE_ANSI* = 1;
+  _BSD_SOURCE* = 1;
+  _SVID_SOURCE* = 1;
+  _POSIX_SOURCE* = 1;
+  _POSIX_C_SOURCE* = 200809;
+  __USE_POSIX_IMPLICITLY* = 1;
+  __USE_POSIX* = 1;
+  __USE_POSIX2* = 1;
+  __USE_POSIX199309* = 1;
+  __USE_POSIX199506* = 1;
+  __USE_XOPEN2K* = 1;
+  __USE_ISOC95* = 1;
+  __USE_ISOC99* = 1;
+  __USE_XOPEN2K8* = 1;
+  _ATFILE_SOURCE* = 1;
+  __USE_MISC* = 1;
+  __USE_BSD* = 1;
+  __USE_SVID* = 1;
+  __USE_ATFILE* = 1;
+  __USE_FORTIFY_LEVEL* = 0;
+  __STDC_IEC_559__* = 1;
+  __STDC_IEC_559_COMPLEX__* = 1;
+  __STDC_ISO_10646__* = 200009;
+  __GNU_LIBRARY__* = 6;
+  __GLIBC__* = 2;
+  __GLIBC_MINOR__* = 13;
+END features.

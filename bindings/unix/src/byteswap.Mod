@@ -1,0 +1,6 @@
+MODULE byteswap [ INTERFACE "C" ];
+
+IMPORT SYSTEM;
+CONST
+  _BITS_BYTESWAP_H* = 1;
+END byteswap.

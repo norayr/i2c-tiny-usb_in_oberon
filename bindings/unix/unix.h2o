@@ -1,0 +1,38 @@
+
+/* for now, ignore const attributes */
+
+H2O {
+  OPTIONS {
+    OutputDirectory = "src";
+    Include = 
+	"/usr/include";
+    Exclude = "stddef.h";
+    AutoPrefix = "";
+    AllowRedefinedProc = 1;
+    AllowRedefined = 1;
+  }
+
+  MODULE "types" {
+    Prolog = "
+typedef char * String;
+typedef void * Ptr;
+typedef long size_t;
+";
+  }
+
+  VARIANT {
+    "String" : CSTRING POINTER;
+    "_pipe" [0] : VAR ARRAY;
+  }
+}
+
+#define const
+#define inline
+#define static
+#define __declspec(x)
+#define __cdecl
+#define __inline__
+
+#include <unistd.h>
+#include <fcntl.h>
+#include <sys/stat.h>
